@@ -1,0 +1,282 @@
+*********** admin.php
+//******  versão  2.5 alpha
+
+define("_AM_XMAIL_ADMENU8","Log de Erros");
+define("_AM_XMAIL_ADMENU9","Como Agendar Envio?");
+define("_AM_XMAIL_EDITORVISUAL","Editores visuais não instalado.Veja na pasta docs como instalar. ");  
+
+define("_AM_XMAIL_FORMEXPORT","Exportação do cadastro de Assinantes da Newsletter ");  
+define("_AM_XMAIL_SELELECIONAR","Selecionar Cadastros :");  
+define("_AM_XMAIL_AMBOS","Ambos:");  
+define("_AM_XMAIL_CONFIRMADOS","Confirmados:");  
+define("_AM_XMAIL_NAOCONFIRMADOS","Não Confirmados:");  
+define("_AM_XMAIL_DELIMITADOR","Delimitador:");  
+define("_AM_XMAIL_ARQSUCCESS","Exportação de assinantes gerada com sucesso !!<BR> Campos exportados:  Nome, Apelido, Email  ");  
+define("_AM_XMAIL_ARQERR","Erro na geração do arquivo  ");  
+
+define("_AM_XMAIL_VOLTAR","Voltar");  
+define("_AM_XMAIL_ERRCARREGAR","Erro ao carregar o arquivo ");  
+
+define("_AM_XMAIL_AUTHOR","Autora :");
+
+define("_AM_XMAIL_DEVINFOS","Informações Sobre o Desenvolvedor");
+define("_AM_XMAIL_DEVSITE","Site do Desenvolvedor.:");
+define("_AM_XMAIL_BUGSREP","Report Bugs.:");
+define("_AM_XMAIL_RFEREP","Feedback and Sugestions.:");
+define("_AM_XMAIL_FORUMS","Fórum Support.:");
+define("_AM_XMAIL_CHANGELOG","Change Log");
+
+
+define("_AM_XMAIL_NAOHAREG","Não ha registros a serem exportados ");
+define("_AM_XMAIL_FORMIMPORT","Upload de arquivo para importar cadastro de Assinantes da Newsletter ");
+define("_AM_XMAIL_SELARQUP","Localize o arquivo<BR>(extensão obrigatório = txt) : ");
+define("_AM_XMAIL_ERRUPLOAD","Erro no envio do arquivo - Verifique se a pasta de uploads  tem permissão de escrita ");  
+define("_AM_XMAIL_OKUPLOAD","Upload executado com sucesso !! ");  
+define("_AM_XMAIL_VALORESMAXUP","Parâmetros de configuração do php.ini : <br>Tamanho máximo do arquivo para upload: %s
+<br>Tamanho máximo para envio de variáveis POST  %s");  
+define("_AM_XMAIL_EXTENSIONINVALID","Extensão do arquivo inválida ");
+define("_AM_XMAIL_LAYOUESPERADO","Layout esperado:");
+define("_AM_XMAIL_LAYOUPIMPORT","(CSV) 3 campos separados pelo delimitador informado , com a sequência:<BR> Nome, Apelido , Email <br><b><i>Os cadastros serão inseridos na situação de confirmados.</b></i> ");
+define("_AM_XMAIL_EMAILJAEXISTE","Email ja existe no cadastro ");
+define("_AM_XMAIL_IMPORTOK","Importação concluida com sucesso . Inseriu  %s  registro(s)  ");
+define("_AM_XMAIL_IMPORTNAOHAREG","Não ha registros a serem importados  ");
+define("_AM_XMAIL_IMPORTNAOABRIUARQ","Não foi possível abrir o arquivo  ");
+define("_AM_XMAIL_IMPORTREGERR","Registro incorreto para importação:   ");
+define("_AM_XMAIL_EMAILREPETIDO","Encontrado email repetido no arquivo de importação, considerou-se o primeiro ");
+//define("_AM_XMAIL_HORAINTERVALO","Horas de intervalo entre o envio de lotes.<br>Útil para Servidores que limitam o envio de emails por hora<br>");
+define("_AM_XMAIL_ENVIAXMAILS2","<br><spam style='color:red'>( Quantidade de emails por lote )</i></spam>");
+define("_AM_XMAIL_PARAMNOTDEFEDIT","É necessário definir o editor visual a ser utilizado  ");
+
+
+
+
+define("_AM_XMAIL_FORMIMPORT2","Upload de arquivo para importar Perfis de Assinantes da Newsletter ");
+define("_AM_XMAIL_LAYOUPIMPORT2","(CSV) campos separados pelo delimitador informado.
+<br> Sendo o primeiro campo o email ja cadastrado,os demais campos os codigos de perfis ja cadastrados, separados pelo delimitador informado. ");
+
+define("_AM_XMAIL_EMAILNOTFOUND","Email não cadastrado ");
+define("_AM_XMAIL_PERFILNOTFOUND","Perfil não cadastrado ");
+
+define("_AM_XMAIL_CAMPOSEMPTY","Há campos vazios, registro não importado ");
+
+define("_AM_XMAIL_MINUTOSINTERVALO","Minutos de intervalo entre o envio de lotes.<br>
+Útil para não sobrecarregar a fila do Servidor de Email, e não causar lentidão. <br>
+Opção usada somente com agendamento , executado pelo script  send_agenda.php  .
+");
+
+define("_AM_XMAIL_LOTESPORHORA","Quantos lotes enviar em uma hora .<br>
+Informe 0 (zero) para não limitar.<br>
+Útil para Servidores que limitam envio de emails por hora. <br>
+Opção usada somente com agendamento , executado pelo script  send_agenda.php.
+");
+
+define("_AM_XMAIL_EMAILNOTVALIDO","Email não válido");
+//-------------------------//
+
+define("_AM_XMAIL_PERFIL","Perfil");
+define("_AM_XMAIL_VERI_MAILOK2" ,"Se optar por não e o usuário  não desejar receber emails, será enviado p/ private message. <br/>
+Se optar por sim e o usuário não deseja receber emails e foi solicitado somente envio de emails ,nada será enviado.<br/>
+Porém será gerado mensagem de aviso que o perfil dele não aceita receber emails e continuará pendente no lote.
+ ");
+
+
+define("_AM_XMAIL_NAOHAPERF","Não há perfis para este assinante");
+
+define("_AM_XMAIL_ASSINANTES","Assinantes");
+//-----------------------------------//
+define("_AM_XMAIL_NOTOPENARQ",'Não foi possível abrir o arquivo');
+define("_AM_XMAIL_NOTEXITARQ",'Não há arquivo de Erros ');
+define("_AM_XMAIL_NOTEXITARQ",'Não há arquivo de Erros ');
+
+define("_AM_XMAIL_NOTHAREG",'Não há registros cadastrados ');
+define("_AM_XMAIL_VERASSINANTES",'Ver Assinantes');
+
+
+
+
+
+
+
+
+
+******** admin_newsletter.php
+
+<li><b>Importar arquivo no formato CSV para o seu cadastro de perfis de assinantes de newsletter</b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+********** blocks.php
+
+define('_MB_XMAIL_TITBLOCO3','Últimas Newsletters');
+
+
+
+
+
+
+
+
+
+
+******** main.php
+//------------ incluido versão 2.5 alpha
+
+define("_MD_XMAIL_DT_AGENDA","Data para Agendar Envio <br> YYYY-mm-dd");
+define("_MD_XMAIL_MEN_AGENDADO","O envio das mensagens foi agendado para %s ");
+define("_MD_XMAIL_AGENDADOPARA","Agendado p/");  
+define("_MD_XMAIL_MEN_APOS_AGENDAMENTO","<br>A qualquer momento você pode solicitar o envio , na opção 'Lotes Pendente'<br>
+        Certifique-se de ter agendado o script que dispara o envio das mensagens  automaticamente .");  
+define("_MD_XMAIL_NAO_MEN_AGENDADA","Não ha mensagens agendadas para esta data ");  
+define("_MD_XMAIL_ERRO_SAVE","Erro ao gravar o arquivo ");  
+define("_MD_XMAIL_ADMLOGERRO","XMAIL - Administração do log de erros no envio de mensagens  ");  
+define("_MD_XMAIL_VIEW","Visualizar");  
+
+
+define("_MD_XMAIL_MODEDITORNOT","Módulo Editor  não está instalado");  
+define("_MD_XMAIL_QTDLOTEMAIOR","Quantidade do lote %s maior do que limite permitido de envio , no intervalo ");
+define("_MD_XMAIL_MODTINYEDITORNOT","Módulo Tinyeditor não está instalado");  
+define("_MD_XMAIL_MODEDITOR","Módulo Editor");  
+define("_MD_XMAIL_MENSOTEXTO","Informe mensagem versão somente texto.<br>Para ser exibida em Clientses de email que não aceitam HTML ");  
+define("_MD_XMAIL_EMAILINVALIDO","Email inválido:  %s ");  
+
+
+define("_MD_XMAIL_ERRSETAGENDA","Erro ao prorrogar data do agendamento do lote %s ");
+
+//---------------------
+define("_MD_XMAIL_ATIVARAGENDA","Ativar Agendamento") ;
+define("_MD_XMAIL_LOTEGERADOS","Foram gerados os lotes de %s  a  %s.
+<br>Você pode disparar os envios na opção: <a href='".XOOPS_URL.'/modules/xmail/gerencia_lote.php'."'>"._MD_XMAIL_LOTES_P."</a>
+<br>ou na Área Administrativa em "._MD_XMAIL_ATIVARAGENDA);
+define("_MB_XMAIL_TITBLOCO4"   ,"Agendamento  Xmail") ;
+define("_MD_XMAIL_EXECAGENDA"   ,"Execução de Agendamento de envio de mensagens/emails pelo  Xmail.<br>
+Esta opção não deve ser usada quando ha restrição de envios de emails por hora.<br>
+Neste caso, utilize o agendamento de tarefas no Servidor ") ;
+define("_MD_XMAIL_EXECAGENDADESCRI","Esta página está em constante execução. <br>Sendo atualizada a cada  %s  segundos ") ;
+define("_MD_XMAIL_EMPROC"   ,"Em Processamento... ") ;
+define("_MD_XMAIL_PARAR"   ,"Parar execução ") ;
+
+
+
+
+
+********** modinfo.php
+// versão 2.5
+
+define("_MI_XMAIL_ADMENU8"             ,"Log de Erros");
+define("_MI_XMAIL_ADMENU9"             ,"Como Agendar Envio?");
+
+define("_MI_XMAIL_ASSINANEWS"          ,"Assinantes");
+define("_MI_XMAIL_OTIMIZADB"           ,"Otimizar DB");
+define("_MI_XMAIL_IMPORTUSERTONEWS"    ,"Importar Usuários");
+
+define("_MI_XMAIL_ADMENU10"            ,"Exportar Assinantes");
+define("_MI_XMAIL_ADMENU11"            ,"Importar Assinantes");
+
+define("_MI_XMAIL_ADMENU12"            ,"Importar Perfis de Assinantes");
+
+define("_MI_XMAIL_HELPFILE"            ,"Help");
+define("_MI_XMAIL_ABOUT"               ,"About");
+define("_MI_XMAIL_BLOCK3"              ,"Últimas Newsletters") ;
+define("_MI_XMAIL_DESCRIBLOCK3"        ,"Link com as últimas newsletters enviadas");
+define("_MI_XMAIL_MAIN_NEWSLETTER"     ,"Main");
+define("_MI_XMAIL_DOCS"                ,"Documentação");
+define("_MI_XMAIL_CREDITS"             ,"Credits");
+define("_MI_XMAIL_HISTORIC"            ,"Historic");
+define("_MI_XMAIL_MANUAL"              ,"Manual");
+##########################################################################################
+## Menu Generic Utils                                                                   ##
+##########################################################################################
+define("_MI_XMAIL_INDEX"                       ,"Main");
+define("_MI_XMAIL_ADMENU_MYBLOCKSADMIN"        ,"blocks/Groups - Permissions");
+define("_MI_XMAIL_ADMENU_MYTPLSADMIN"          ,"Templates");
+define("_MI_XMAIL_UPDATE_MODULE"               ,"Update Module");
+define("_MI_XMAIL_UTILS"                       ,"Utilitars");
+define("_MI_XMAIL_FALHOU_LANG_DOCS"            ,"Not found file <b>docs.php</b> in directory of your language");
+define("_MI_XMAIL_FALHOU_LANG_HISTORIC"        ,"Not found file <b>historic.php</b> in directory of your language");
+define("_MI_XMAIL_FALHOU_LANG_PRESENTATION"    ,"Não encontrou o arquivo <b>presentation.php</b> no seu diretório de language");
+define("_MI_XMAIL_FALHOU_LANG_UTILS_INDEX"     ,"Não encontrou o arquivo <b>utils_index.php</b> no seu diretório de language");
+define("_MI_XMAIL_FALHOU_LANG_COMO_AGENDAR"    ,"Not found file <b>comoagendar.php</b> in directory of your language");
+define("_MI_XMAIL_FALHOU_LANG_HELPFILE"        ,"Não encontrou o arquivo <b>helpfile.php</b> no seu diretório de language");
+define("_MI_XMAIL_FALHOU_LANG_MODINFO"         ,"Não encontrou o arquivo <b>modinfo.php</b> no seu diretório de language - ERRO GRAVE");
+define("_MI_XMAIL_FALHOU_LANG_ADMIN_NEWSLETTER","Não encontrou o arquivo <b>admin_newsletter.php</b> no seu diretório de language");
+define("_MI_XMAIL_FALHOU_LANG_MANXMAIL","Not found file <b>man-xmail.php</b> in directory docs into your language");
+define("_MI_XMAIL_ADMIN_MAIN"                  ,"Menu Principal");
+
+##########################################################################################
+## Const. Xoops_Version and Menu, about, index, etc...                                  ##
+##########################################################################################
+define("_MI_XMAIL_AUTHOR_DESC"     ,"Autora :");                                          // Info Screen.
+define("_MI_XMAIL_AUTHOR_REALNAME" ,"Seu Nome Completo Aqui");                           // Your name complete (no obrigatório)
+define("_MI_XMAIL_SITE_AUTHOR"     ,"Url do site do Author") ;                           // URL do site do autor. Nem sempre será o mesmo do local de desenvolvimento.
+define("_MI_XMAIL_DEV_SITE"        ,"http://www.xoopstotal.com.br");                     // Endereço do site de desenvolvimento.
+define("_MI_XMAIL_SUPPORT"         ,"Url do site de suporte ao módulo");                 // URL site de suporte ou fórum de suporte. - No futuro web-service para agendar suporte.
+define("_MI_XMAIL_REPORT_BUGS"     ,"Url para reportas bugs");                           // URL de site ou fórum para reportar bugs.
+define("_MI_XMAIL_REPORT_FEATURES" ,"Url para reportas sugestões");                      // URL de site ou fórum para enviar sugestões de melhorias.
+define("_MI_XMAIL_NEW_VERSION"     ,"Url para verificar novas versões");                 // URL de site ou download para nova versão.
+define("_MI_XMAIL_QAS_CHECK_PASSED","Url para ver página de testes QAS");                // URL de Página para os testes realizados com esta versão.
+define("_MI_XMAIL_DEPENDENCES"     ,"Xoops 2.0.15 ou maior, XtDevObjects versão 1.0");   // Quais as dependencias que este módulo possui, exemplo, FrameWork, SmartObjects, XtDevObjects, etc..
+define("_MI_XMAIL_COMPATIBLE"      ,"Xoops 2.0*, XoopsCube 2.0*, Code-Plus Alfa 0.2");   // Quais as versões que este módulo é compátivel.
+define("_MI_XMAIL_DIRNAME"         ,"xmail");                                            // Alterar aqui para o nome do diretório onde o módulo será instalado. Cuidado aqui caso não exista a tradução em sua lingua.
+
+// Info General
+
+// Info Dev
+define("_MI_XMAIL_DEVREPORT_FEATURES_DESC","Send new Features.......: ");
+define("_MI_XMAIL_DEVSITE_DESC"           ,"Site de Desenvolvimento.: ");
+define("_MI_XMAIL_DEVSITE_AUTHOR_DESC"    ,"Site do Author..........: ");
+define("_MI_XMAIL_DEVREPORT_BUGS_DESC"    ,"Send Report Bugs........: ");
+define("_MI_XMAIL_DEVNEW_VERSION_DESC"    ,"Check New Version.......: ");
+define("_MI_XMAIL_DEVQAS_CHECK_DESC"      ,"Site QAS Test...........: ");
+define("_MI_XMAIL_DEV_DEPENDENCES_DESC"   ,"Module Dependences......: ");
+define("_MI_XMAIL_DEV_COMPATIBLE_DESC"    ,"Compatible with.........: ");
+
+define("_MI_XMAIL_DEVINFOS"               ,"Informações do Desenvolvedor ");
+define("_MI_XMAIL_DEVSITE_NAME"           ,"XoopsTotal - A comunidade diferente");
+define("_MI_XMAIL_DEVSITEAUTHOR_NAME"     ,"Nome do site do Author, Slogan inclusive :-)");
+define("_MI_XMAIL_DEVREPORT_BUGS_NAME"    ,"Reportar Bugs");
+define("_MI_XMAIL_DEVREPORT_FEATURES_NAME","Site for send new features and Sugestions");
+define("_MI_XMAIL_DEVNEW_VERSION_NAME"    ,"Site New version Check-in");
+define("_MI_XMAIL_DEVQAS_CHECK_NAME"      ,"QAS Chek-in tests module result");
+define("_MI_XMAIL_DEV_DEPENDENCES_NAME"   ,"");
+define("_MI_XMAIL_DEV_COMPATIBLE_NAME"    ,"");
+
+// Info Change Log
+define("_MI_XMAIL_CHANGELOG"              ,"Info Change Log ");
+
+// Utils - Optimize
+define("_MI_XMAIL_DBERROR"                ,"Tabela do banco de dados Falhou");
+define("_MI_XMAIL_TABLEOPT"               ,"Tabela Otimizada com Sucesso");
+
+//}
+
+
+define("_MI_XMAIL_BLOCK4"              ,"Agendamento  Xmail") ;
+define("_MI_XMAIL_DESCRIBLOCK4"        ,"Dispara envios de emails agendados");
+
+
+define("_MI_XMAIL_ATIVARAGENDA","Ativar Agendamento") ;
+
+
+
+
+
+
+
+********** utils_index.php
+
+<li><b>Administração de Templates</b></li>
+<li><b>Administração de Grupos para este módulo</b>
+<li><b>Administração de blocos para este módulo</b>
+<li><b>Verificação de Tabelas deste módulo</b>
+<li><b>Otimização de Tabelas para este módulo</b>
+<li><b>Atualização deste módulo no Sistema</b>

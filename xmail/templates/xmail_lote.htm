@@ -1,0 +1,98 @@
+<{$menuprincipal}>
+<div align="center">
+   <center>
+        <table border="0" cellpadding="0" cellspacing="0" width="98%">
+            <tr>
+                <td width="50%">
+                     <p align="center"> <img src="images/logo-xmail.png" alt="XMAIL" border="0"/> 
+                     <{$titulo}><br /><{$totalmen}></p>
+                </td>
+                <td width="50%">
+                     <{if $comform eq "S" }>
+                          <form method="POST" action=<{$actionform}> name="mesage">
+                                <div align="center">
+                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class= "outer"  >
+                                          <tr>
+                                              <td width="30%"  class='head'   ><{$ordem}>: </td>
+                                              <td width="50%"  class='even' >
+                                                  <input type="radio" value="D" name="ordem"><{$data_lote}><br />
+                                                  <input type="radio" value="U" name="ordem"><{$solicitante}>
+                                              </td>
+                                              <td  width="20%" class='odd'  > <input type="submit" value="<{$enviar}> " name="B1"> </td>
+                                          </tr>
+                                     </table>
+                                </div>
+                          </form>
+						  <form method="POST" action=<{$actionform}> name="exclote">
+                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" class= "outer"  >
+                                          <tr>
+                                              <td width="80%" class='even' >
+                                             <{$exc}>&nbsp;<{$lote}>&nbsp; <input type="text"  value="" name="lote" size=4 maxlength="=8"    >
+                                               a <input type="text" value="" name="lotea" size=4 maxlength="=8"   >
+                                              <input type="hidden" name="op" value='exc' />
+                                              </td>
+                                              <td  width="20%" class='odd'  > <input type="submit" value="<{$enviar}> " name="B2"> </td>
+                                          </tr>
+                                     </table>
+						  
+						  
+						  </form>
+                          
+                          
+                     <{else}>
+                             <br />
+                     <{/if }>
+                    
+                </td>
+                <td>
+               </tr>
+        </table>
+   </center>
+</div>
+<table border="0" width="95%" cellspacing="1" cellpadding="3" align="center" class= "outer">
+  <tr class="itemHead"   >
+    <td align="left" class="itemHead" width='15%'></td>
+    <td align="left" class="itemHead" width='20%'><b><{$mensagem}></b></td>
+    <td align="left" class="itemHead" width="55%"><div align="center"></div></td><td> </td>
+    <td align="left" class="itemHead" width="10%"><div align="center"><b><{$opt}></b></div></td>
+  </tr>
+  <!-- Start topic loop -->
+  <{foreach name=outer item=topics from=$topics}> 
+  <tr valign="top" class="even"    >
+    <td class="even" align="left"><b><{$lote}>:</b>&nbsp;<{$topics.lote_solicit}><br />
+        <b><{$data_lote}></b><br><{$topics.dt_solicit}><br />
+        <b><{$solicitante}>:</b><br><{$topics.link_user_logado}> <br />
+        <b><{$pendente}>:</b><{$topics.qtd_pendente}><br / >
+        <b><{$agendado}>:</b><{$topics.dt_agenda}>
+    </td>
+    <td class="even" align="left"><b><{$codigo}>:</b>&nbsp;<{$topics.id_men}><br />
+        <b><{$title_men}>:</b><br /><{$topics.title_men}>
+    </td>
+    <td >
+		<input name='exibemen' id='exibemen_<{$smarty.foreach.outer.iteration}>'  type='button' value='Exibe' onclick="exibe_esconde('<{$smarty.foreach.outer.iteration}>')"  />
+        <div class="even" align="left"  id='exibe_<{$smarty.foreach.outer.iteration}>' style='display:none'   ><{$topics.body_men}> <br />
+             <b><{$ultenvio}>:&nbsp </b> <{$topics.date_envio}>
+                 <{if $topics.anexos  eq ""}>
+                 
+                 <{else}>
+                      <br><b><{$anexos}>&nbsp </b> <{$topics.anexos}><br />
+                 <{/if}>
+        </div>
+    </td>
+    <td class="even" align="left">
+      <b><{$usucad}>:</b><br><{$topics.poster}><br />
+      <b><{$datacad}>:</b><br /><{$topics.datesub}>
+    </td>
+    <td class="head" align="left">
+      <form action='gerencia_lote.php?op=send' method='post' >
+      <input type='hidden' name='lote' value='<{$topics.lote_solicit}>' >
+      <input type='submit'  name='<{$enviar}>' value='<{$enviar}>' >
+      </form>
+<!--      <a href="gerencia_lote.php?op=send&lote=<{$topics.lote_solicit}>" ><{$enviar}></a> <br /> -->
+      <a href="gerencia_lote.php?op=exc&lote=<{$topics.lote_solicit}>" ><{$exc}> <br />
+    </td>
+  </tr>
+  <{/foreach}>
+    <!-- End topic loop -->
+</table>
+  <div class='even' align="center" > <{$navega}> </div>

@@ -1,0 +1,128 @@
+body {
+	font-size: .85em;
+	margin: 0; padding: 0; }
+.block { 
+	height: 100px; 
+	width: 100px; 
+	border: 1px solid #ffffff; /*threedface;*/
+	text-align: center;
+	behavior: url(hover.htc);
+	font-size: .85em;
+	font-family: "MS Sans Serif", Geneva, sans-serif;
+	padding: 0px;
+}
+/** html .block {height: 110px; width: 98px;}*/
+
+.block a img {
+	border: none;
+}
+.block:hover, .block.hover {
+	/*background-color: #eeeeee;
+	border: 1px solid #cccccc;*/
+	background-color: #d4e3f2;
+	border: 1px solid #2b6fb6;
+}
+.edit {
+	font-size: 9pt;
+	font-family: "MS Sans Serif", Geneva, sans-serif;
+	padding-top: 5px;
+}
+.edit a {
+	border: 1px solid white;
+	padding: 3px;
+}
+.edit a:hover {
+	background-color: #FFFFBE;
+	border: 1px solid #AAAAAA;
+}
+.edit a img {
+	border: 0 none;
+	vertical-align: bottom;
+}
+.noResult { 
+	font-size:large;
+	font-weight:bold;
+	color:#ccc;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 160px;
+}
+.error {
+	color:#c00;
+	font-weight:bold;
+	font-size: medium;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	padding-top: 65px;
+}
+
+/*Contextual menu */
+.ctxmenu {
+	width: 100%;
+    font: 12px tahoma,verdana,sans-serif;
+}
+.ctxmenu .item1,
+.ctxmenu .item1:hover,
+.ctxmenu .item1-active,
+.ctxmenu .item1-active:hover {
+	padding: 3px 0px 3px 0px;
+    border: none;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+.ctxmenu .item1 {
+    background: transparent; /*#0EA138;*/
+    color: #000000;
+}
+.ctxmenu .item1:hover,
+.ctxmenu .item1-active,
+.ctxmenu .item1-active:hover {
+    background: transparent; /*#FF6600;*/
+    color: #000000;
+}
+.ctxmenu .item2,
+.ctxmenu .item2:hover {
+    /*padding: 6px 4px 6px 4px;*/
+	padding: 3px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    float: left;
+}
+.ctxmenu .item2 {
+	font-size: 90%;
+	border: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+    float: left;
+}
+.ctxmenu .item2:hover {
+	border: 1px solid #0A246A;
+	background-color: #B6BDD2;
+	cursor: arrow;
+	float: left;
+}
+.ctxmenu .section {
+	background-color: #ffffff;
+    border: 1px #cccccc;
+	text-indent: 12px;
+    border-style: solid solid solid solid;
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    white-space: nowrap;
+}
+
+.ctxmenu .section td {
+}
+/*
+.ctxmenu .left, .ctxmenu .left:hover { border-style: solid none solid solid; }
+.ctxmenu .right, .ctxmenu .right:hover { border-style: solid solid solid none; }
+*/
+
+* html .ctxmenu td { position: relative; } /* ie 5.0 fix */
+
+
+

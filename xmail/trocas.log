@@ -1,0 +1,505 @@
+
+--------------------------------------------------------------------------------
+ Log gerado em 19-06-2007 pelo script /x2016/modules/xmail/teste-troca.php 
+ - Total de trocas: 0
+--------------------------------------------------------------------------------
+ Log gerado em 19-06-2007 pelo script /x2016/modules/xmail/teste-troca.php 
+ - Total de trocas: 0
+--------------------------------------------------------------------------------
+ Log gerado em 19-06-2007 pelo script /x2016/modules/xmail/teste-troca.php 
+ - Total de trocas: 0
+--------------------------------------------------------------------------------
+ Log gerado em 19-06-2007 pelo script /x2016/modules/xmail/teste-troca.php
+C:/wamp/www/x2016/modules/xmail/admin/gerencia_ativa.php
+ Alterou  linha 16: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/admin/gerencia_ativa.php
+ Alterou  linha 17: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/admin/gerencia_ativa.php
+ Alterou  linha 19: Antes: if ( isset($HTTP_POST_VARS['post']) ) $op = 'post';
+ Depois: if ( isset($_POST['post']) ) $op = 'post';
+
+C:/wamp/www/x2016/modules/xmail/admin/gerencia_ativa.php
+ Alterou  linha 20: Antes: if ( isset($HTTP_POST_VARS['upload']) ) $op = 'upload';
+ Depois: if ( isset($_POST['upload']) ) $op = 'upload';
+
+C:/wamp/www/x2016/modules/xmail/admin/gerencia_ativa.php
+ Alterou  linha 22: Antes: $mat_id=$HTTP_POST_VARS['mat_id'];  // matriz com id dos usuários selecionados
+ Depois: $mat_id=$_POST['mat_id'];  // matriz com id dos usuários selecionados
+
+C:/wamp/www/x2016/modules/xmail/admin/gerencia_ativa.php
+ Alterou  linha 23: Antes: $userstart=$HTTP_GET_VARS['userstart'];
+ Depois: $userstart=$_GET['userstart'];
+
+C:/wamp/www/x2016/modules/xmail/admin/gerencia_ativa.php
+ Alterou  linha 90: Antes:         $userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois:         $userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/admin/manut_xmail_tabperfil.php
+ Alterou  linha 20: Antes:         } elseif (!empty($HTTP_POST_VARS)) {
+ Depois:         } elseif (!empty($_POST)) {
+
+C:/wamp/www/x2016/modules/xmail/admin/manut_xmail_tabperfil.php
+ Alterou  linha 21: Antes:             $var=  extract($HTTP_POST_VARS);
+ Depois:             $var=  extract($_POST);
+
+C:/wamp/www/x2016/modules/xmail/admin/param.php
+ Alterou  linha 18: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/admin/param.php
+ Alterou  linha 22: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/admin/param.php
+ Alterou  linha 26: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/admin/param.php
+ Alterou  linha 27: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/admin/param.php
+ Alterou  linha 29: Antes: if ( isset($HTTP_POST_VARS['post']) ) $op = 'post';
+ Depois: if ( isset($_POST['post']) ) $op = 'post';
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 23: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 27: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 31: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 32: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 51: Antes: 	if (!empty($HTTP_POST_VARS['mail_to_group'])) {  // se informou grupos
+ Depois: 	if (!empty($_POST['mail_to_group'])) {  // se informou grupos
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 54: Antes: 		foreach ($HTTP_POST_VARS['mail_to_group'] as $groupid ) {
+ Depois: 		foreach ($_POST['mail_to_group'] as $groupid ) {
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 71: Antes:     if (!empty($HTTP_POST_VARS['id_men'])) {
+ Depois:     if (!empty($_POST['id_men'])) {
+
+C:/wamp/www/x2016/modules/xmail/admin/verlog.php
+ Alterou  linha 98: Antes:     $userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois:     $userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/download.php
+ Alterou  linha 14: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/download.php
+ Alterou  linha 18: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 16: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 20: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 24: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 25: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 27: Antes: if ( isset($HTTP_POST_VARS['post']) ) $op = 'post';
+ Depois: if ( isset($_POST['post']) ) $op = 'post';
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 28: Antes: if ( isset($HTTP_POST_VARS['upload']) ) $op = 'upload';
+ Depois: if ( isset($_POST['upload']) ) $op = 'upload';
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 235: Antes:     	$title_men = $myts->makeTboxData4Save($HTTP_POST_VARS['title_men']);
+ Depois:     	$title_men = $myts->makeTboxData4Save($_POST['title_men']);
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 236: Antes:     	$subject_men = $myts->makeTareaData4Save($HTTP_POST_VARS['subject_men']);
+ Depois:     	$subject_men = $myts->makeTareaData4Save($_POST['subject_men']);
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 237: Antes:     	$body_men= $myts->makeTareaData4Save($HTTP_POST_VARS['body_men']);
+ Depois:     	$body_men= $myts->makeTareaData4Save($_POST['body_men']);
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 238: Antes:     	$body_men_text= $myts->makeTareaData4Save($HTTP_POST_VARS['body_men_text']);
+ Depois:     	$body_men_text= $myts->makeTareaData4Save($_POST['body_men_text']);
+
+C:/wamp/www/x2016/modules/xmail/gerencia.php
+ Alterou  linha 423: Antes:     $userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois:     $userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote-alt.php
+ Alterou  linha 16: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote-alt.php
+ Alterou  linha 20: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote-alt.php
+ Alterou  linha 24: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote-alt.php
+ Alterou  linha 25: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote-alt.php
+ Alterou  linha 27: Antes: if ( isset($HTTP_POST_VARS['post']) ) $op = 'post';
+ Depois: if ( isset($_POST['post']) ) $op = 'post';
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote-alt.php
+ Alterou  linha 28: Antes: if ( isset($HTTP_POST_VARS['upload']) ) $op = 'upload';
+ Depois: if ( isset($_POST['upload']) ) $op = 'upload';
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote-alt.php
+ Alterou  linha 131: Antes:     $userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois:     $userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote.php
+ Alterou  linha 19: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote.php
+ Alterou  linha 23: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote.php
+ Alterou  linha 27: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote.php
+ Alterou  linha 28: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote.php
+ Alterou  linha 30: Antes: if ( isset($HTTP_POST_VARS['post']) ) $op = 'post';
+ Depois: if ( isset($_POST['post']) ) $op = 'post';
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote.php
+ Alterou  linha 31: Antes: if ( isset($HTTP_POST_VARS['upload']) ) $op = 'upload';
+ Depois: if ( isset($_POST['upload']) ) $op = 'upload';
+
+C:/wamp/www/x2016/modules/xmail/gerencia_lote.php
+ Alterou  linha 136: Antes:     $userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois:     $userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/include/classxmail_tabperfil.php
+ Alterou  linha 60: Antes:       global  $xoopsDB, $men_erro , $HTTP_GET_VARS ; 
+ Depois:       global  $xoopsDB, $men_erro , $_GET ; 
+
+C:/wamp/www/x2016/modules/xmail/include/classxmail_tabperfil.php
+ Alterou  linha 89: Antes:       global  $xoopsDB ,$HTTP_GET_VARS  ; 
+ Depois:       global  $xoopsDB ,$_GET  ; 
+
+C:/wamp/www/x2016/modules/xmail/include/classxmail_tabperfil.php
+ Alterou  linha 101: Antes:          $regstart = isset($HTTP_GET_VARS['regstart']) ? intval($HTTP_GET_VARS['regstart']) : 0;
+ Depois:          $regstart = isset($_GET['regstart']) ? intval($_GET['regstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/include/class_ativacao.php
+ Alterou  linha 72: Antes:       global  $xoopsDB, $men_erro , $HTTP_GET_VARS ;
+ Depois:       global  $xoopsDB, $men_erro , $_GET ;
+
+C:/wamp/www/x2016/modules/xmail/include/class_ativacao.php
+ Alterou  linha 89: Antes:       global  $xoopsDB ,$HTTP_GET_VARS  ;
+ Depois:       global  $xoopsDB ,$_GET  ;
+
+C:/wamp/www/x2016/modules/xmail/include/class_ativacao.php
+ Alterou  linha 101: Antes:          $regstart = isset($HTTP_GET_VARS['regstart']) ? intval($HTTP_GET_VARS['regstart']) : 0;
+ Depois:          $regstart = isset($_GET['regstart']) ? intval($_GET['regstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/include/class_aux_send.php
+ Alterou  linha 110: Antes:       global  $xoopsDB, $men_erro , $HTTP_GET_VARS ;
+ Depois:       global  $xoopsDB, $men_erro , $_GET ;
+
+C:/wamp/www/x2016/modules/xmail/include/class_aux_send.php
+ Alterou  linha 195: Antes:       global  $xoopsDB, $men_erro , $HTTP_GET_VARS ; 
+ Depois:       global  $xoopsDB, $men_erro , $_GET ; 
+
+C:/wamp/www/x2016/modules/xmail/include/xmail_ativa.php
+ Alterou  linha 35: Antes:     $email = isset($HTTP_GET_VARS['email']) ? trim($HTTP_GET_VARS['email']) : '';
+ Depois:     $email = isset($_GET['email']) ? trim($_GET['email']) : '';
+
+C:/wamp/www/x2016/modules/xmail/include/xmail_ativa.php
+ Alterou  linha 36: Antes:     $email = isset($HTTP_POST_VARS['email']) ? trim($HTTP_POST_VARS['email']) : $email;
+ Depois:     $email = isset($_POST['email']) ? trim($_POST['email']) : $email;
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 18: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 22: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 25: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 26: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 45: Antes: 		if ( $op == "send" && !empty($HTTP_POST_VARS['mail_send_to']) ) {
+ Depois: 		if ( $op == "send" && !empty($_POST['mail_send_to']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 49: Antes: 			if ( !empty($HTTP_POST_VARS['mail_inactive']) ) {
+ Depois: 			if ( !empty($_POST['mail_inactive']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 52: Antes: 				if (!empty($HTTP_POST_VARS['mail_mailok'])) {
+ Depois: 				if (!empty($_POST['mail_mailok'])) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 57: Antes: 					if(!empty($HTTP_POST_VARS['user_id'])) {
+ Depois: 					if(!empty($_POST['user_id'])) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 58: Antes: 						foreach ($HTTP_POST_VARS['user_id'] as $userid ) {
+ Depois: 						foreach ($_POST['user_id'] as $userid ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 65: Antes: 					if (!empty($HTTP_POST_VARS['mail_to_group'])) {
+ Depois: 					if (!empty($_POST['mail_to_group'])) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 68: Antes: 						foreach ($HTTP_POST_VARS['mail_to_group'] as $groupid ) {
+ Depois: 						foreach ($_POST['mail_to_group'] as $groupid ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 86: Antes: 				if ( !empty($HTTP_POST_VARS['mail_lastlog_min']) ) {
+ Depois: 				if ( !empty($_POST['mail_lastlog_min']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 87: Antes: 					$f_mail_lastlog_min = trim($HTTP_POST_VARS['mail_lastlog_min']);
+ Depois: 					$f_mail_lastlog_min = trim($_POST['mail_lastlog_min']);
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 93: Antes: 				if ( !empty($HTTP_POST_VARS['mail_lastlog_max']) ) {
+ Depois: 				if ( !empty($_POST['mail_lastlog_max']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 94: Antes: 					$f_mail_lastlog_max = trim($HTTP_POST_VARS['mail_lastlog_max']);
+ Depois: 					$f_mail_lastlog_max = trim($_POST['mail_lastlog_max']);
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 100: Antes: 				if ( !empty($HTTP_POST_VARS['mail_idle_more']) && is_numeric($HTTP_POST_VARS['mail_idle_more']) ) {
+ Depois: 				if ( !empty($_POST['mail_idle_more']) && is_numeric($_POST['mail_idle_more']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 101: Antes: 					$f_mail_idle_more = intval(trim($HTTP_POST_VARS['mail_idle_more']));
+ Depois: 					$f_mail_idle_more = intval(trim($_POST['mail_idle_more']));
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 108: Antes: 				if ( !empty($HTTP_POST_VARS['mail_idle_less']) && is_numeric($HTTP_POST_VARS['mail_idle_less']) ) {
+ Depois: 				if ( !empty($_POST['mail_idle_less']) && is_numeric($_POST['mail_idle_less']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 109: Antes: 					$f_mail_idle_less = intval(trim($HTTP_POST_VARS['mail_idle_less']));
+ Depois: 					$f_mail_idle_less = intval(trim($_POST['mail_idle_less']));
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 117: Antes: 			if ( !empty($HTTP_POST_VARS['mail_regd_min']) ) {
+ Depois: 			if ( !empty($_POST['mail_regd_min']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 118: Antes: 				$f_mail_regd_min = trim($HTTP_POST_VARS['mail_regd_min']);
+ Depois: 				$f_mail_regd_min = trim($_POST['mail_regd_min']);
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 124: Antes: 			if ( !empty($HTTP_POST_VARS['mail_regd_max']) ) {
+ Depois: 			if ( !empty($_POST['mail_regd_max']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 125: Antes: 				$f_mail_regd_max = trim($HTTP_POST_VARS['mail_regd_max']);
+ Depois: 				$f_mail_regd_max = trim($_POST['mail_regd_max']);
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 132: Antes: 				if ( empty($HTTP_POST_VARS['mail_inactive']) ) {
+ Depois: 				if ( empty($_POST['mail_inactive']) ) {
+
+C:/wamp/www/x2016/modules/xmail/index.php
+ Alterou  linha 277: Antes: 	$userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois: 	$userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/print.php
+ Alterou  linha 3: Antes: foreach ($HTTP_POST_VARS as $k => $v)
+ Depois: foreach ($_POST as $k => $v)
+
+C:/wamp/www/x2016/modules/xmail/print.php
+ Alterou  linha 8: Antes: foreach ($HTTP_GET_VARS as $k => $v)
+ Depois: foreach ($_GET as $k => $v)
+
+C:/wamp/www/x2016/modules/xmail/sendnews.php
+ Alterou  linha 18: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/sendnews.php
+ Alterou  linha 22: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/sendnews.php
+ Alterou  linha 26: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/sendnews.php
+ Alterou  linha 27: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/sendnews.php
+ Alterou  linha 67: Antes: 		if ( $op == "send" && !empty($HTTP_POST_VARS['mail_send_to']) ) {
+ Depois: 		if ( $op == "send" && !empty($_POST['mail_send_to']) ) {
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 12: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 16: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 22: Antes: if ( isset($HTTP_POST_VARS['post']) ) {
+ Depois: if ( isset($_POST['post']) ) {
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 24: Antes: } elseif ( isset($HTTP_POST_VARS['edit']) ) {
+ Depois: } elseif ( isset($_POST['edit']) ) {
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 58: Antes:     	$title_men = $myts->makeTboxData4Save($HTTP_POST_VARS['title_men']);
+ Depois:     	$title_men = $myts->makeTboxData4Save($_POST['title_men']);
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 59: Antes:     	$subject_men = $myts->makeTareaData4Save($HTTP_POST_VARS['subject_men']);
+ Depois:     	$subject_men = $myts->makeTareaData4Save($_POST['subject_men']);
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 60: Antes:     	$body_men= $myts->makeTareaData4Save($HTTP_POST_VARS['body_men']);
+ Depois:     	$body_men= $myts->makeTareaData4Save($_POST['body_men']);
+
+C:/wamp/www/x2016/modules/xmail/submit.php
+ Alterou  linha 63: Antes: 		$body_men_text= $myts->makeTareaData4Save($HTTP_POST_VARS['body_men_text']);
+ Depois: 		$body_men_text= $myts->makeTareaData4Save($_POST['body_men_text']);
+
+C:/wamp/www/x2016/modules/xmail/upgrade.php
+ Alterou  linha 32: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/upgrade.php
+ Alterou  linha 36: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/upgrade1.06.php
+ Alterou  linha 39: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/upgrade1.06.php
+ Alterou  linha 43: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/upgrade1.07_to_1.08.php
+ Alterou  linha 40: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/upgrade1.07_to_1.08.php
+ Alterou  linha 44: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/upgrade1.08_to_1.09.php
+ Alterou  linha 39: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/upgrade1.08_to_1.09.php
+ Alterou  linha 43: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 19: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 23: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 27: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 28: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 48: Antes: 	if (!empty($HTTP_POST_VARS['mail_to_group'])) {  // se informou grupos
+ Depois: 	if (!empty($_POST['mail_to_group'])) {  // se informou grupos
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 51: Antes: 		foreach ($HTTP_POST_VARS['mail_to_group'] as $groupid ) {
+ Depois: 		foreach ($_POST['mail_to_group'] as $groupid ) {
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 68: Antes:     if (!empty($HTTP_POST_VARS['id_men'])) {
+ Depois:     if (!empty($_POST['id_men'])) {
+
+C:/wamp/www/x2016/modules/xmail/verlog.php
+ Alterou  linha 95: Antes:     $userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois:     $userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/verlog_news.php
+ Alterou  linha 20: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/verlog_news.php
+ Alterou  linha 24: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/verlog_news.php
+ Alterou  linha 28: Antes: if (isset($HTTP_GET_VARS['op'])) $op=$HTTP_GET_VARS['op'];
+ Depois: if (isset($_GET['op'])) $op=$_GET['op'];
+
+C:/wamp/www/x2016/modules/xmail/verlog_news.php
+ Alterou  linha 29: Antes: if (isset($HTTP_POST_VARS['op'])) $op=$HTTP_POST_VARS['op'];
+ Depois: if (isset($_POST['op'])) $op=$_POST['op'];
+
+C:/wamp/www/x2016/modules/xmail/verlog_news.php
+ Alterou  linha 54: Antes:     if (!empty($HTTP_POST_VARS['id_men'])) {
+ Depois:     if (!empty($_POST['id_men'])) {
+
+C:/wamp/www/x2016/modules/xmail/verlog_news.php
+ Alterou  linha 84: Antes:     $userstart = isset($HTTP_GET_VARS['userstart']) ? intval($HTTP_GET_VARS['userstart']) : 0;
+ Depois:     $userstart = isset($_GET['userstart']) ? intval($_GET['userstart']) : 0;
+
+C:/wamp/www/x2016/modules/xmail/vermen.php
+ Alterou  linha 18: Antes: foreach ($HTTP_POST_VARS as $k => $v) {
+ Depois: foreach ($_POST as $k => $v) {
+
+C:/wamp/www/x2016/modules/xmail/vermen.php
+ Alterou  linha 22: Antes: foreach ($HTTP_GET_VARS as $k => $v) {
+ Depois: foreach ($_GET as $k => $v) {
+ 
+ - Total de trocas: 123
