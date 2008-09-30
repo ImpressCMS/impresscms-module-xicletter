@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{$lang_insert_xcode_title}</title>
+<script language="javascript" type="text/javascript" src="../../tiny_mce_popup.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+// created 2005-1-12 by Martin Sadera (sadera@e-d-a.info)
+// ported to Xoops CMS by ralf57
+    function init() {
+        var formObj = document.forms[0];
+        formObj.ctext.value  = tinyMCE.getWindowArg('ctext');
+        formObj.insert.value = tinyMCE.getLang('lang_' + tinyMCE.getWindowArg('mceDo'));
+        window.focus();
+    }
+
+    function insertCD() {
+        var formObj = document.forms[0];
+        if (window.opener) {
+            var ctext = formObj.ctext.value;
+            ctext = tinyMCE.regexpReplace(ctext, "<", "&lt;");
+            ctext = tinyMCE.regexpReplace(ctext, ">", "&gt;");
+            var html = '<div class="xoopsCode">';
+            html += ctext+'</div><br />';
+            tinyMCE.execCommand("mceInsertContent",true,html);
+            top.close();
+        }
+    }
+
+    function cancelAction() {
+        top.close();
+    }
+
+//-->
+</script>
+</head>
+<body onload="init();">
+    <form onsubmit="insertCD();return false;">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td align="center" valign="middle"><table border="0" cellpadding="4" cellspacing="0">
+                    <tr>
+                        <td class="title">{$lang_insert_xcode_sub}</td>
+                    </tr>
+                    <tr>
+                        <td nowrap="nowrap">
+                            <textarea name="ctext" type="text" id="ctext" value="" style="width: 350px;height:200px; vertical-align: middle;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                        	<input type="button" name="insert" value="{$lang_insert}" onclick="insertCD();" id="insert" />
+                        	<input type="button" name="cancel" value="{$lang_cancel}" onclick="cancelAction();" id="cancel" />
+                        </td>
+                    </tr>
+                </table></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

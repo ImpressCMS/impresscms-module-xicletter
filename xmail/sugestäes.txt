@@ -1,0 +1,177 @@
+
+Sugestões para o xmail   http://www.xoopstotal.com.br/modules/newbb/viewtopic.php?topic_id=6290&viewmode=flat&order=ASC&type=&mode=0&start=0
+
+
+
+1. A tool for keeping contacts lists (supported by a custom fields ability, and custom made groups/lists - not xoops groups) ... can be similar to an advanced phonebook.
+
+
+1. Uma ferramenta para manter as listas dos contatos (suportadas por uma abilidade feita sob encomenda dos campos, e pelo costume - grupos/listas feitos - não grupos dos xoops)… pode ser similar a um phonebook avançado. 
+
+-------------------------------------------
+If you take a look @ Phplists or @ some commercial mailinglists, you'll find most of the following features, but usually not orgenized or presented good enough.
+In the described mailinglist, the phonebook tool will takecare of dealing with the contacts on those lists, and the mailinglist tool will take care of sending emails, maybe even folow their arrival/bounces of the emails and of course the mailings archives.
+
+Se você fizer exame de um olhar @ Phplists ou @ alguns mailinglists comerciais, você encontrará a maioria das seguintes características, mas geralmente não orgenized ou apresentou bom bastante.      No mailinglist descrito, o takecare da vontade da ferramenta do phonebook de tratar dos contatos naquelas listas, e a ferramenta do mailinglist tomará cuidado de emitir email, nivela talvez o folow seus chegada/saltos dos email e naturalmente dos arquivos dos enviamentos. 
+
+
+------------------------------
+2. Import-export contacts from-to xoops-users-database + csv(outlook/excell/... friendly)  and/or pdf (maybe even mysql table ofyour previeous mailinglist).
+
+
+2. Contatos do Import-export -à xoops-usuário-base de dados + ao csv (outlook/excell/… amigável) e/ou ao pdf (nivelar talvez o mailinglist previeous do ofyour da tabela do mysql). 
+
+
+--------------------------------------------------------------------------
+
+    2a. there should be very strong and stable "user import" function - It's very important that the Import-export tool will do it's actions in packets, for avoiding the script-execution time (php.ini) which is set to minimum on a shared environment.
+    2b. import of xoops groups users will be made into a selected contact's list
+
+2a. deve haver do “uma função muito forte e estável da importação usuário” - é muito importante que a ferramenta do Import-export o fará é ações nos pacotes, para evitar o tempo da certificado-execução (php.ini) que é ajustado ao mínimo em um ambiente compartilhado.      2b. a importação de usuários dos grupos dos xoops será feita na lista de um contato selecionado 
+
+--------------------------------------------------------------------------
+
+
+For this control, divibe by size files and upload script.
+
+Citando:
+
+
+    3. opt-in and opt-out feature.
+    4. Predefined fields (name, family name, primary Email, secondary Email, phone, mobile phone, address, etc')
+    5. Extra Custum fields (or hard coded, but with the ability to show/hide/change name + field kind).
+
+
+3. opt-em e característica opt-para fora.    
+4. Campos predefinidos (nome, nome de família, email preliminar, email secundário, telefone, telefone móvel, endereço, etc') 
+5. Campos extra de Custum (ou codificado duramente, mas com mostrar da abilidade/nome do hide/mudança + tipo do campo). 
+
+
+If profile users hack for version 2.0.13.2, working in final version.
+
+Citando:
+
+
+    5a. for each field, checkbox for showing it at list view and/or at extended view.
+
+
+
+No, i not uderstand.
+
+Citando:
+
+
+    6. phonebook presentation for the user's side (backed up with ability to show-hide contacts lists for each xoops group, and with show-hide fields for each contact list)
+    - Contacts dividing by groups
+    - Alphabetic sorting.
+    - Users Can search phonebook
+
+
+
+Depedence for module profile.
+
+Citando:
+
+
+    - - subscribe / unsubscribe as in the folowing lines:
+    - Xoops users can add themselves to the phone
+
+
+
+Exist in xmail.
+
+Citando:
+
+
+    book/mailinglist.
+    - Anonimus users can/cannot add themselfs to the phonebook-mailinglist.
+    - an updated disclaimer b4 the add user thing. (we won't give your address to a third party thing )
+    - Users can update info if tied to a xoops user (after loggin in)
+
+
+
+No exist.
+
+Citando:
+
+
+    - users cad get out of the lists (admin approval or not at all)
+    7. option (for admin) to add , edit , delete , move to another list - users
+
+
+
+Exist in Xmail.
+
+Citando:
+
+
+    8. duplicated user records in lists.
+    9. - Admin Can approve or allow auto approve for users who add entries in specific groups.
+
+
+
+No exist in Xmail.
+
+Citando:
+
+
+    10. Groups with admin rights for the mailinglist module (as for all xoops modules) and for each contacts group.
+    11. Blocks: Phonebooks categories(groups) , subscribe-unsubscribe-update my details ...
+
+    MAILINGLIST SIDE
+    (sending mails and Archiving)
+
+
+
+Next version Xmail.
+
+Citando:
+
+
+    1. Sending Emails in sessions (packets) with the ability to choose no. of emails at one session - not booging shared servers , maybe even choosing how many users from a domain will get email from the mailinglist at a time interval.
+    2. Html and text emails in the same time, with wysiwyg support (xoops wysiwyg class)
+    3. Templates ( editable will be nice ) for the newsletters.
+    4. Ability to send to groups and/or individuals.
+    5. Function for not sending duplicated emails if user is in more then one group.
+
+
+
+Exist in Xmail.
+
+Citando:
+
+
+    6. Pre defined vars for using in the emails
+    ( first name, family name, Email , direct link for unsuscribe, direct link for updating user'sdetails
+
+
+
+No exist in Xmail, good idea. Analysing.
+
+Citando:
+
+
+    7. Each sent mail can be included in the archives (or not), and the can be deleted and edited by admin .
+
+
+
+Exist in Xmail.
+
+Citando:
+
+
+    8. Newsletters archive with categories/subjects.
+    9. Search archive feature.
+
+
+
+Exist in Xmail.
+
+Citando:
+
+
+    10. Blocks for individuals archive categories.
+
+    I'll update this list with some more .... my kids drive me crazy right now 
+
+

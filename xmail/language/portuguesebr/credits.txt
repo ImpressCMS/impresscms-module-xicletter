@@ -1,0 +1,12 @@
+###:===========================================================
+###:==| Credits Translations : Team http://br.impresscms.org.
+###:===========================================================
+###:==| Version.........: 2.52
+###:==| Charset.........: UTF-8
+###:==| Data Release....: 
+###:==| Module..........: XicPoll - Project impresscms.org
+###:==| Status..........: 
+###:==| Translations....: GibaPhp - gibaphp@impresscms.org
+###:==|                 :
+###:==| Revision........: 
+###:===========================================================

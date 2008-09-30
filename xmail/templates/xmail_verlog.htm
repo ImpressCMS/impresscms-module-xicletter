@@ -1,0 +1,51 @@
+<{$menuprincipal}>
+<p><div align = 'center'> <img src="images/logo-xmail.png" alt="XMAIL" border="0"/> </div>
+<p><div align = 'center'> <h4><{$titulo}></h4> </div>
+
+<table border="0" width="90%" cellspacing="1" cellpadding="3" align="center" class= "outer">
+  <tr> 
+    <td align="left" class="itemHead" width='15%'></td>
+    <td align="left" class="itemHead" width='70%'><b><{$mensagem}></b></td>
+    <td align="left" class="itemHead" width="15%">
+      <div align="center"> <{$envto}> </div>
+   </td>
+  </tr>
+  <!-- Start topic loop -->
+  <{foreach name=outer item=topics from=$topics}> 
+  <tr valign="top"> 
+    <td class="even" align="left"><b><{$codigo}>:</b>&nbsp;<{$topics.id_men}><br />
+    <b><{$title_men}>:</b><br><{$topics.title_men}> <br />
+    <b><{$ultenvio}>:&nbsp </b> <br> <{$topics.date_envio}>
+    </td>
+
+    <td class='even' >
+    <div class='head' align="left"> <b><{$subject}>:</b> <{$topics.subject_men}><br /> </div>
+    <div class="even" align="left">
+    <input name='exibemen' id='exibemen_<{$smarty.foreach.outer.iteration}>'  type='button' value='Exibe' onclick="exibe_esconde('<{$smarty.foreach.outer.iteration}>')"  />
+    
+    <div  id='exibe_<{$smarty.foreach.outer.iteration}>' style='display:none' >
+    <{$topics.body_men}>
+    </div>
+    <!-- fim do corpo da mensagem -->
+
+    <{if $topics.anexos  eq ""}>
+
+    <{else}>
+        <br><b><{$anexos}>&nbsp </b> <{$topics.anexos}><br />
+    <{/if}>
+
+    </div>
+    </td>
+
+    <td class="head" align="left">
+      <{$topics.users}>
+
+    </td>
+    </tr>
+
+  <{/foreach}>
+  <!-- End topic loop -->
+</table>
+  <div class='even' align="center" > <{$navega}> </div>
+
+
